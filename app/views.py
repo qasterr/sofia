@@ -6,7 +6,7 @@ from flask import Blueprint, render_template
 
 views = Blueprint("views", __name__)
 
-courses = Path(Path(__file__).parent.parent / "courses")
+course_path = Path(Path(__file__).parent.parent / "courses")
 
 
 @views.route("/")
@@ -14,7 +14,7 @@ def index():
     """Return the page"s index."""
     courses = []
 
-    for entry in courses.glob("*"):
+    for entry in course_path.glob("*"):
         if entry.is_dir():
             lesson_path = Path(entry / "course.json")
 
