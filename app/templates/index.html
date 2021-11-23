@@ -15,18 +15,23 @@
 <body>
     <h1>Courses</h1>
 
-    {% for course in courses %}
-        {% set course_location = course["location"] %}
-        <section onclick="openCourse('{{ course_location }}');">
-            <div class="icon">
-                {{ course['icon'] }}
-            </div>
-            <div class="info">
-                <h2>{{ course['name'] }}</h2>
-                <p>{{ course['description'] }}</p>
-            </div>
-        </section>
-    {% endfor %}
+    {# Show a different text if no courses were found. #}
+    {% if courses | length %}
+        {% for course in courses %}
+            {% set course_location = course["location"] %}
+            <section onclick="openCourse('{{ course_location }}');">
+                <div class="icon">
+                    {{ course['icon'] }}
+                </div>
+                <div class="info">
+                    <h2>{{ course['name'] }}</h2>
+                    <p>{{ course['description'] }}</p>
+                </div>
+            </section>
+        {% endfor %}
+    {% else %}
+        <h2>No courses found. Try adding one.</h2>
+    {% endif %}
 
 </body>
 </html>
