@@ -3,3 +3,6 @@ requirements:
 
 black:
 	python3 -m black app/**.py run.py -l 79
+
+lint:
+	python3 -m pylint app/**.py run.py
