@@ -6,7 +6,7 @@ from flask import Blueprint, render_template
 
 views = Blueprint("views", __name__)
 
-lessons = Path(Path(__file__).parent.parent / "lessons")
+courses = Path(Path(__file__).parent.parent / "courses")
 
 
 @views.route("/")
@@ -14,9 +14,9 @@ def index():
     """Return the page"s index."""
     courses = []
 
-    for entry in lessons.glob("*"):
+    for entry in courses.glob("*"):
         if entry.is_dir():
-            lesson_path = Path(entry / "lesson.json")
+            lesson_path = Path(entry / "course.json")
 
             if lesson_path.exists():
                 # pylint: disable=invalid-name
@@ -29,7 +29,7 @@ def index():
             # Skip if the lesson path starts with `.`
             elif not entry.name.startswith("."):
                 print(
-                    f"Lesson {entry.name} has no `lesson.json` file. Skipped."
+                    f"Lesson {entry.name} has no `course.json` file. Skipped."
                 )
 
     return render_template("index.html", courses=courses)
