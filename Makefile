@@ -6,3 +6,6 @@ black:
 
 lint:
 	python3 -m pylint app/**.py run.py
+
+run:
+	python3 run.py
