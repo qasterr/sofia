@@ -136,3 +136,9 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# Ignore custom lessons
+lessons/*
+# EXCEPT the tutorial lesson
+!lessons/tutorial
+!lessons/tutorial/*
