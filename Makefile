@@ -7,5 +7,7 @@ black:
 lint:
 	python3 -m pylint app/**.py run.py
 
+check: black lint
+
 run:
 	python3 run.py
