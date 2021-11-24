@@ -5,7 +5,7 @@ black:
 	python3 -m black app/**.py run.py -l 79
 
 lint:
-	python3 -m pylint app/**.py run.py
+	python3 -m pylint -d fixme app/**.py run.py
 
 check: black lint
 
