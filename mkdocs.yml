@@ -1,5 +1,5 @@
 site_name: sofia documentation
-site_url: https://example.com/
+site_url: https://sofia-docs.readthedocs.io/
 nav:
   - Home: index.md
   - Courses: courses.md
