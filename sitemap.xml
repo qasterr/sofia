@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://example.com/</loc>
+         <loc>https://qasterr.github.io/sofia/</loc>
          <lastmod>2021-11-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/courses/</loc>
+         <loc>https://qasterr.github.io/sofia/courses/</loc>
          <lastmod>2021-11-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/dependencies/</loc>
+         <loc>https://qasterr.github.io/sofia/dependencies/</loc>
          <lastmod>2021-11-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
