@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://example.com/courses/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Courses - sofia documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Courses";
+    var mkdocs_page_input_path = "courses.md";
+    var mkdocs_page_url = "/courses/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> sofia documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Courses</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#folder-structure">Folder structure</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#coursejson">course.json</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-coursejson-file">Example course.json file</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#single-markdown-file">Single markdown file</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-file">Example file</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#folder">Folder</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-lessonjson-file">Example lesson.json file</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#folder-architecture">Folder architecture</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#final-lesson-structure">Final lesson structure</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../dependencies/">Dependencies</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">sofia documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Courses</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="courses">Courses</h1>
+<p>Sofia is ordered in courses, which contain lessons.
+These can be made by you or downloaded from the internet.
+Here's a guide on how to do this:</p>
+<p><strong>WARNING: Downloaded courses can serve malicious HTML and JavaScript. Be careful with what you download!</strong></p>
+<h2 id="folder-structure">Folder structure</h2>
+<p>To be recognized as a valid course, the course must be located in <code>./courses</code>.
+It must contain also a <code>course.json</code> file to indicate information about the course.</p>
+<pre><code>courses/
+├─ course_name/
+│  ├─ course.json
+</code></pre>
+<h3 id="coursejson">course.json</h3>
+<p>A <code>course.json</code> should have the following keys: <code>name</code>, <code>description</code>, <code>icon</code>, <code>author</code>, <code>version</code>.</p>
+<h4 id="example-coursejson-file">Example <code>course.json</code> file</h4>
+<pre><code class="language-json">{
+    &quot;name&quot;: &quot;Lorem Ipsum&quot;,
+    &quot;description&quot;: &quot;Dolor sit amet.&quot;,
+    &quot;icon&quot;: &quot;📜&quot;,
+    &quot;author&quot;: &quot;John Doe&quot;,
+    &quot;version&quot;: &quot;1.0.0&quot;
+}
+</code></pre>
+<p>Obviously courses are useless if they don't have content, this can be done via two ways:</p>
+<h3 id="single-markdown-file">Single markdown file</h3>
+<p>The most basic way to make a lesson is by making a markdown file.
+To do this, add a <code>.md</code> file in the course directory.</p>
+<pre><code class="language-bash">touch 01-single-file.md
+</code></pre>
+<p>To be valid they have to have a header with info.
+This can be done by adding <code>---</code> before the content.
+Before that are the headers. These are written in YAML.</p>
+<p>To be valid it must contain the following keys:</p>
+<p><code>name</code> - The name of the lesson. This will be displayed in the lessons list.</p>
+<p><code>description</code> - A short description of the contents of the lesson.</p>
+<p><code>icon</code> - An emoji which stands for the lesson.</p>
+<p>Optional values:</p>
+<p><code>css</code> - An array of links to custom css files. These can be from third-parties or be held into the course directory.
+To do so just add the folling entry to the css: <code>"/courses/&lt;course_name&gt;/style.css"</code>. More than one css file can be added.</p>
+<h4 id="example-file">Example file</h4>
+<pre><code class="language-text">name: Lorem Ipsum
+description: Dolor sit amet.
+icon: 📜
+---
+# Lorem Ipsum
+Dolor sit amen
+</code></pre>
+<h3 id="folder">Folder</h3>
+<p>For long lessons, it is better to make a folder whose contents will be merged together.
+To do this make a folder in the course directory and add a <code>lesson.json</code>
+<code>lesson.json</code> files should contain the same contents the header but in JSON format.</p>
+<h4 id="example-lessonjson-file">Example <code>lesson.json</code> file</h4>
+<pre><code class="language-json">{
+    &quot;name&quot;: &quot;Lorem Ipsum&quot;,
+    &quot;description&quot;: &quot;Dolor sit amet.&quot;,
+    &quot;icon&quot;: &quot;📜&quot;
+}
+</code></pre>
+<p>This will be the header values for the whole lesson, so <strong>DO NOT PUT HEADERS IN THE MARKDOWN FILES</strong>.</p>
+<h4 id="folder-architecture">Folder architecture</h4>
+<pre><code>courses/
+├─ course_name/
+│  ├─ 01-lesson/
+│  │  ├─ 01-lorem.md
+│  │  ├─ 02-ipsum.md
+│  │  ├─ lesson.json
+</code></pre>
+<h2 id="final-lesson-structure">Final lesson structure</h2>
+<p>A complete lesson should look like this:</p>
+<pre><code>courses/
+├─ course_name/
+│  ├─ 01-lesson/
+│  │  ├─ 01-file.md
+│  │  ├─ 02-file.md
+│  │  ├─ lesson.json
+│  ├─ 02-lesson.md
+│  ├─ course.json
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../dependencies/" class="btn btn-neutral float-right" title="Dependencies">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../dependencies/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
