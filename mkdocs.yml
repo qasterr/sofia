@@ -1,5 +1,5 @@
 site_name: sofia documentation
-site_url: https://sofia-docs.readthedocs.io/
+site_url: https://qasterr.github.io/sofia/
 nav:
   - Home: index.md
   - Courses: courses.md
