@@ -1,5 +1,4 @@
 # Sofia
-![](https://img.shields.io/badge/license-MIT-green)
 ![](https://readthedocs.org/projects/sofia-docs/badge/?version=latest)
 
 Welcome to sofia, a simple app for learning new things through simple lessons.
