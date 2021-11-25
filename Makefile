@@ -9,5 +9,13 @@ lint:
 
 check: black lint
 
+docs.serve:
+	mkdocs serve
+
+docs.build:
+	mkdowcs build
+
 run:
-	python3 run.py
+	export FLASK_APP=run.py && \
+	export FLASK_ENV=development && \
+	flask run
