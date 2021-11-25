@@ -1,0 +1,9 @@
+site_name: sofia documentation
+site_url: https://example.com/
+nav:
+  - Home: index.md
+  - Courses: courses.md
+  - Dependencies: dependencies.md
+theme:
+  name: readthedocs
+  highlightjs: true
