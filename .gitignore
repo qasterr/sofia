@@ -139,6 +139,3 @@ cython_debug/
 
 # Ignore custom course
 courses/*
-# EXCEPT the tutorial courses
-!courses/tutorial
-!courses/tutorial/*
