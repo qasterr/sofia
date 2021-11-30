@@ -62,8 +62,6 @@ def lesson_(course_name, lesson_name):
     """Render a lesson."""
     lesson_path = Path(course_path / course_name / lesson_name)
 
-    print(vars(request))
-
     if not lesson_path.exists():
         return abort(404)
 
