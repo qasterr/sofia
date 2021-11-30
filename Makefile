@@ -13,7 +13,7 @@ docs.serve:
 	mkdocs serve
 
 docs.build:
-	mkdowcs build
+	mkdocs build
 
 run:
 	export FLASK_APP=run.py && \
