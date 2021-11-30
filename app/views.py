@@ -83,7 +83,7 @@ def lesson_(course_name, lesson_name):
 
             headers, i = utils.get_headers(lesson_path)
 
-            text = "\n".join(f.readlines()[i :])
+            text = "\n".join(f.readlines()[i:])
 
             return utils.render_markdown(text, css_link, headers=headers)
         # Allows for custom files such as css or even html.
