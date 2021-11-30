@@ -77,6 +77,9 @@ For long lessons, it is better to make a folder whose contents will be merged to
 To do this make a folder in the course directory and add a `lesson.json`
 `lesson.json` files should contain the same contents the header but in JSON format.
 
+Because of some weird bug, **ADD AN EMPTY LINE AT THE END EACH FILE**.
+Else the spacing between each file gets messed up.
+
 #### Example `lesson.json` file
 ```json
 {
