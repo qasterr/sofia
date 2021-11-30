@@ -62,8 +62,6 @@ def lesson_(course_name, lesson_name):
     """Render a lesson."""
     lesson_path = Path(course_path / course_name / lesson_name)
 
-    print(vars(request))
-
     if not lesson_path.exists():
         return abort(404)
 
@@ -80,7 +78,6 @@ def lesson_(course_name, lesson_name):
         return utils.render_markdown(text, css_link, headers=lesson_info)
 
     with open(lesson_path, "r", encoding="utf-8") as f:
-        print(lesson_path.name)
         if lesson_path.name.endswith(".md"):
 
             headers, i = utils.get_headers(lesson_path)
