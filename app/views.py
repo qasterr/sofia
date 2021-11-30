@@ -69,9 +69,10 @@ def lesson_(course_name, lesson_name):
 
     if lesson_path.is_dir():
         text = ""
-        for entry in lesson_path.glob("*.md"):
+        for i, entry in enumerate(lesson_path.glob("*.md")):
             with open(entry, "r", encoding="utf-8") as f:
-                text += f.read() + "\n\n"
+                text += "" if i == 0 else "<hr>"
+                text += f.read()
 
         lesson_info = utils.load_json(lesson_path / "lesson.json")
 
