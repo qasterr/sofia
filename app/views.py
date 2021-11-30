@@ -1,7 +1,7 @@
 """Contains all the routes for sofia."""
 
 from pathlib import Path
-from flask import Blueprint, render_template, abort, request
+from flask import Blueprint, render_template, abort
 
 from . import utils
 
@@ -90,5 +90,4 @@ def lesson_(course_name, lesson_name):
         # Obviously this opens up the possibility of malicious
         # Javascript, but it is up to the user to check their files.
         # They are warned in the docs.
-        # TODO: Add warning.
         return f.read()
